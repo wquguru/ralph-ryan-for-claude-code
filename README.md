@@ -100,6 +100,19 @@ Ralph will:
 | `progress.txt` | Append-only learnings for future iterations |
 | `skills/prd/` | Skill for generating PRDs |
 | `skills/ralph/` | Skill for converting PRDs to JSON |
+| `flowchart/` | Interactive visualization of how Ralph works |
+
+## Flowchart
+
+The `flowchart/` directory contains an interactive React Flow visualization that explains how Ralph works. Great for presentations or understanding the workflow.
+
+```bash
+cd flowchart
+npm install
+npm run dev
+```
+
+Then open http://localhost:5173 and click through to see each step.
 
 ## Critical Concepts
 
