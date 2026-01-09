@@ -58,6 +58,14 @@
   min-height: 44px;
 }
 
+.btn-icon {
+  display: none;
+}
+
+.btn-text {
+  display: inline;
+}
+
 @media (hover: hover) {
   .controls button:hover:not(:disabled) {
     background: #222;
@@ -193,6 +201,41 @@
   }
 
   .note-node {
+    display: none;
+  }
+
+  .controls {
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .controls button {
+    padding: 10px 16px;
+    font-size: 18px;
+  }
+
+  .btn-text {
+    display: none;
+  }
+
+  .btn-icon {
+    display: inline;
+  }
+
+  .step-counter {
+    font-size: 14px;
+    min-width: auto;
+  }
+
+  .header h1 {
+    font-size: 20px;
+  }
+
+  .header p {
+    font-size: 14px;
+  }
+
+  .instructions {
     display: none;
   }
 }

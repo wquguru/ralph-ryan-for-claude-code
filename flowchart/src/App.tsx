@@ -351,16 +351,19 @@ function App() {
       </div>
       <div className="controls">
         <button onClick={handlePrev} disabled={visibleCount <= 1}>
-          Previous
+          <span className="btn-text">Previous</span>
+          <span className="btn-icon">←</span>
         </button>
         <span className="step-counter">
-          Step {visibleCount} of {allSteps.length}
+          {visibleCount} / {allSteps.length}
         </span>
         <button onClick={handleNext} disabled={visibleCount >= allSteps.length}>
-          Next
+          <span className="btn-text">Next</span>
+          <span className="btn-icon">→</span>
         </button>
         <button onClick={handleReset} className="reset-btn">
-          Reset
+          <span className="btn-text">Reset</span>
+          <span className="btn-icon">↺</span>
         </button>
       </div>
       <div className="instructions">
