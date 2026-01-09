@@ -1,6 +1,6 @@
 # Ralph-Ryan for Claude Code | Claude Code 版 Ralph-Ryan
 
-![Ralph](ralph.webp)
+![Ralph](ralph.jpg)
 
 ## Introduction | 简介
 
@@ -9,6 +9,16 @@ Ralph-Ryan is a Claude Code skill for autonomous iterative development. It combi
 
 **中文：**
 Ralph-Ryan 是一个用于自主迭代开发的 Claude Code 技能。它将结构化 PRD 生成与 Claude Code 的 `ralph-loop` 插件结合——每次迭代在干净上下文中运行，记忆通过 git 历史和进度文件持久化。
+
+Tested to compress 1-hour tasks (without Ralph Loop or with vanilla Ralph Loop) down to 20 minutes, with significantly improved quality.
+
+实测能将无 Ralph Loop 或原生 Ralph Loop 下 1 小时的任务压缩到 20 分钟完成，且质量大大提升。
+
+---
+
+## Recommended Reading | 推荐阅读
+
+> **[一文读懂Ralph Loop的四种变体：从Claude官方插件到...](https://x.com/wquguru/status/2009303499230908737?s=46)** - 深入解析 Ralph Loop 的不同变体和使用场景（中文）
 
 ---
 
