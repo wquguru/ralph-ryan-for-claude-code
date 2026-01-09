@@ -69,14 +69,18 @@ const notes = [
   },
 ];
 
-function CustomNode({ data }: { data: { title: string; description: string; phase: Phase } }) {
+const MANUAL_STEP_IDS = ['1', '2', '3'];
+
+function CustomNode({ data }: { data: { id: string; title: string; description: string; phase: Phase } }) {
   const colors = phaseColors[data.phase];
+  const isManual = MANUAL_STEP_IDS.includes(data.id);
+  const icon = isManual ? '👆' : '⚙️';
   return (
-    <div 
+    <div
       className="custom-node"
-      style={{ 
-        backgroundColor: colors.bg, 
-        borderColor: colors.border 
+      style={{
+        backgroundColor: colors.bg,
+        borderColor: colors.border
       }}
     >
       <Handle type="target" position={Position.Top} id="top" />
@@ -88,7 +92,7 @@ function CustomNode({ data }: { data: { title: string; description: string; phas
       <Handle type="source" position={Position.Top} id="top-source" />
       <Handle type="source" position={Position.Left} id="left-source" />
       <div className="node-content">
-        <div className="node-title">{data.title}</div>
+        <div className="node-title"><span className="node-icon">{icon}</span> {data.title}</div>
         {data.description && <div className="node-description">{data.description}</div>}
       </div>
     </div>
@@ -151,6 +155,7 @@ function createNode(step: typeof allSteps[0], visible: boolean, position?: { x: 
     type: 'custom',
     position: position || positions[step.id],
     data: {
+      id: step.id,
       title: step.label,
       description: step.description,
       phase: step.phase,
