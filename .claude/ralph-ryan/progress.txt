@@ -72,3 +72,20 @@
   - ReactFlow props accept dynamic values for conditional behavior
   - deleteKeyCode can be empty array to disable keyboard deletion
 ---
+
+## 2026-01-12 - US-006
+- Verified mobile experience using Playwright with iPhone 12 viewport (390x844)
+- Confirmed: matchMedia correctly reports mobile (width 390px < 767px breakpoint)
+- Confirmed: Mobile layout is displayed (compact vertical arrangement)
+- Confirmed: Navigation buttons work correctly
+- Confirmed: Nodes cannot be dragged with touch events (view-only mode working)
+- Note: Mouse events in Playwright bypass ReactFlow's touch detection, but real touch events work correctly
+- Screenshots saved to .playwright-mcp/mobile-us006-*.png
+- **Files changed:**
+  - .playwright-mcp/test_mobile.py (new)
+  - .playwright-mcp/test_mobile_verify.py (new)
+- **Learnings:**
+  - Playwright mouse.down/move/up bypasses mobile touch detection
+  - Use touchscreen.tap() for accurate mobile testing
+  - matchMedia is the reliable way to detect mobile viewport in React
+---
