@@ -353,11 +353,11 @@ function App() {
           onInit={onInit}
           fitView
           fitViewOptions={{ padding: 0.3 }}
-          nodesDraggable={true}
-          nodesConnectable={true}
-          edgesReconnectable={true}
-          elementsSelectable={true}
-          deleteKeyCode={['Backspace', 'Delete']}
+          nodesDraggable={!isMobile}
+          nodesConnectable={!isMobile}
+          edgesReconnectable={!isMobile}
+          elementsSelectable={!isMobile}
+          deleteKeyCode={isMobile ? [] : ['Backspace', 'Delete']}
           panOnDrag={true}
           panOnScroll={true}
           zoomOnScroll={true}

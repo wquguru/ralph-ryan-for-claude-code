@@ -59,3 +59,16 @@
   - Use prevIsMobile ref to detect actual changes vs re-renders
   - Small timeout before fitView ensures DOM has updated with new positions
 ---
+
+## 2026-01-12 - US-005
+- Disabled edit mode on mobile by setting ReactFlow props conditionally
+- nodesDraggable={!isMobile}, nodesConnectable={!isMobile}
+- edgesReconnectable={!isMobile}, elementsSelectable={!isMobile}
+- deleteKeyCode set to empty array on mobile
+- Kept pan/zoom enabled: panOnDrag, panOnScroll, zoomOnScroll, zoomOnPinch
+- **Files changed:**
+  - flowchart/src/App.tsx
+- **Learnings:**
+  - ReactFlow props accept dynamic values for conditional behavior
+  - deleteKeyCode can be empty array to disable keyboard deletion
+---

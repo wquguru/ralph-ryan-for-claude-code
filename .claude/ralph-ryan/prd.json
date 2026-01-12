@@ -76,8 +76,8 @@
         "Typecheck passes"
       ],
       "priority": 5,
-      "passes": false,
-      "notes": ""
+      "passes": true,
+      "notes": "Disabled dragging, connecting, selecting on mobile while keeping pan/zoom"
     },
     {
       "id": "US-006",
