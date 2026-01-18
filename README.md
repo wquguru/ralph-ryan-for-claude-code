@@ -24,21 +24,36 @@ Tested to compress 1-hour tasks (without Ralph Loop or with vanilla Ralph Loop) 
 
 ## Prerequisites | 前置条件
 
-- [Claude Code CLI](https://claude.ai/code) installed | 已安装
-- ralph-loop plugin: `/plugin install ralph-loop@claude-plugins-official`
-- Git repository | Git 仓库
-
----
-
-## Setup | 设置
-
-```bash
-cp -r skills/ralph-ryan ~/.claude/skills/
-```
+- [Claude Code CLI](https://claude.ai/code) installed | 已安装 Claude Code CLI
+- Git installed | 已安装 Git
+- A Git repository for your project | 项目的 Git 仓库
 
 ---
 
 ## Quick Start | 快速开始
+
+### Installation | 安装步骤
+
+**Step 1: Clone the repository | 克隆仓库**
+```bash
+git clone git@github.com:wquguru/ralph-ryan.git
+```
+
+**Step 2: Install the skill | 安装技能**
+```bash
+cd ralph-ryan && cp -r skills/ralph-ryan ~/.claude/skills/
+```
+
+**Step 3: Install ralph-loop plugin | 安装 ralph-loop 插件**
+
+Enter Claude Code and install the official plugin (upgrade to latest version first):
+
+进入 Claude Code，安装官方插件（先升级到最新版本）：
+```bash
+/plugin install ralph-loop@claude-plugins-official
+```
+
+### Usage | 使用方法
 
 ```bash
 # Phase 1: Create PRD | 创建 PRD
